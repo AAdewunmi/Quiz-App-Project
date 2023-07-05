@@ -34,3 +34,12 @@ let questions = [
     answer: 4,
   },
 ];
+
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuesions = [...questions];
+  getNewQuestion();
+};
+
+startGame();
