@@ -76,6 +76,7 @@ choices.forEach((choice) => {
     const classToApply =
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
+    selectedChoice.parentElement.classList.add(classToApply);
     getNewQuestion();
   });
 });
