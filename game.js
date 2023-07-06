@@ -35,6 +35,10 @@ let questions = [
   },
 ];
 
+//CONSTANTS
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 3;
+
 startGame = () => {
   questionCounter = 0;
   score = 0;
@@ -68,6 +72,10 @@ choices.forEach((choice) => {
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
+
+    const classToApply =
+      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
     getNewQuestion();
   });
 });
